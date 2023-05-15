@@ -1,0 +1,18 @@
+// hesaplayan program
+import java.util.Scanner;
+
+public class VucutKitleIndeksi {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Lütfen boyunuzu (metre cinsinde virgul kullanarak ) giriniz: ");
+        double boy = scanner.nextDouble();
+
+        System.out.print("Lütfen kilonuzu giriniz: ");
+        double kilo = scanner.nextDouble();
+
+        double vucutKitleIndeksi = kilo / (boy * boy);
+
+        System.out.println("Vücut Kitle İndeksiniz: " + vucutKitleIndeksi);
+    }
+}
