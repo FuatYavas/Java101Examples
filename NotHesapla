@@ -1,0 +1,43 @@
+// İf-Else Bloklarını kullanmadan Not ortalamasını hesaplayan Program
+package patika1;
+
+import java.util.Scanner;
+
+public class Patika1 {
+    public static void main(String[] args) {
+    Scanner k = new Scanner(System.in);
+
+        System.out.print("Matematik sinav puaninizi girin: ");
+        double matematikPuan = k.nextDouble();
+
+        System.out.print("Fizik sinav puaninizi girin: ");
+        double fizikPuan = k.nextDouble();
+
+        System.out.print("Kimya sinav puaninizi girin: ");
+        double kimyaPuan = k.nextDouble();
+
+        System.out.print("Turkce sinav puaninızi girin: ");
+        double turkcePuan = k.nextDouble();
+
+        System.out.print("Tarih sinav puaninizi girin: ");
+        double tarihPuan = k.nextDouble();
+
+        System.out.print("Muzik sinav puaninizi girin: ");
+        double muzikPuan = k.nextDouble();
+
+        double ortalama = (matematikPuan + fizikPuan + kimyaPuan + turkcePuan + tarihPuan + muzikPuan) / 6.0;
+
+        System.out.println("Matematik sinav puani: " + matematikPuan);
+        System.out.println("Fizik sinav puani: " + fizikPuan);
+        System.out.println("Kimya sinav puani: " + kimyaPuan);
+        System.out.println("Turkce sinav puani: " + turkcePuan);
+        System.out.println("Tarih sinav puani: " + tarihPuan);
+        System.out.println("Muzik sinav puani: " + muzikPuan);
+
+        System.out.print("Sonuç: ");
+        System.out.println(ortalama >= 60 ? "Sınıfı Gecti" : "Sınıfta Kaldı");
+    
+
+    }
+    
+}
