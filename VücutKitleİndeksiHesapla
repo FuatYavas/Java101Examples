@@ -1,4 +1,4 @@
-// hesaplayan program
+// /Vücut Kitle İndeksini hesaplayan program
 import java.util.Scanner;
 
 public class VucutKitleIndeksi {
