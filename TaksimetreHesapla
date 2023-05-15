@@ -1,0 +1,22 @@
+//gidilen mesafeye (KM) göre taksimetre tutarını ekrana yazdıran program
+//System.out.println kısmındaki float dönüşümü double cinsinin virgülden sonraki çok fazla küsüratını gidermemizi sağlar
+import java.util.Scanner;
+
+public class Taksimetre {
+    public static void main(String[] args) {
+        double mesafe, tutar;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Lutfen mesafeyi KM cinsinden giriniz: ");
+        mesafe = scanner.nextDouble();
+
+        tutar = 10 + mesafe * 2.20;
+
+        if (tutar < 20) {
+            tutar = 20;
+        }
+
+        System.out.println("Taksimetre tutari: " + (float)tutar + " TL");
+    }
+}
