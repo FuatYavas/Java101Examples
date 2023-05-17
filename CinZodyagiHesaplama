@@ -1,4 +1,4 @@
-// Girilen yıla göre hesaplayan program
+// Girilen yıla göre çin zodyağını hesaplayan program
 import java.util.Scanner;
 
 public class CinZodyagiHesaplama {
