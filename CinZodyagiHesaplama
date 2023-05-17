@@ -1,0 +1,57 @@
+// Girilen yıla göre hesaplayan program
+import java.util.Scanner;
+
+public class CinZodyagiHesaplama {
+    public static void main(String[] args) {
+        Scanner k = new Scanner(System.in);
+// kullanıcıdan yılı alır
+        System.out.print("Dogum Yilinizi Giriniz: ");
+        int dogumYili = k.nextInt();
+
+        String cinZodyagi = "";
+// Kullanıcının girdiği yıla göre 12 ye bölümünden kalanına göre çin zodyağını bulur
+        switch (dogumYili % 12) {
+            case 0:
+                cinZodyagi = "Maymun";
+                break;
+            case 1:
+                cinZodyagi = "Horoz";
+                break;
+            case 2:
+                cinZodyagi = "Kopek";
+                break;
+            case 3:
+                cinZodyagi = "Domuz";
+                break;
+            case 4:
+                cinZodyagi = "Fare";
+                break;
+            case 5:
+                cinZodyagi = "okuz";
+                break;
+            case 6:
+                cinZodyagi = "Kaplan";
+                break;
+            case 7:
+                cinZodyagi = "Tavsan";
+                break;
+            case 8:
+                cinZodyagi = "Ejderha";
+                break;
+            case 9:
+                cinZodyagi = "Yılan";
+                break;
+            case 10:
+                cinZodyagi = "At";
+                break;
+            case 11:
+                cinZodyagi = "Koyun";
+                break;
+            default:
+                System.out.println("Hatalı Yıl Girişi!");
+                System.exit(0);
+        }
+
+        System.out.println("Cin Zodyagı Burcunuz: " + cinZodyagi);
+    }
+}
