@@ -1,0 +1,22 @@
+//Girilen sayıya kadar eleman sayısını yazdıran program
+//Fibonacci serisi, her sayının kendinden önceki ile toplanması sonucu oluşan bir sayı dizisidir.
+import java.util.Scanner;
+
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Fibonacci Serisi icin eleman sayisini giriniz: ");
+        int n = input.nextInt();
+
+        int a = 0;
+        int b = 1;
+        System.out.print(a + " " + b); // Serinin ilk iki elemanını yazdır
+
+        for (int i = 2; i < n; i++) {
+            int c = a + b; // Bir sonraki elemanı hesapla
+            System.out.print(" " + c); // Sonraki elemanı yazdır
+            a = b; // 'a' değerini 'b' değeriyle güncelle
+            b = c; // 'b' değerini hesaplanan 'c' değeriyle güncelle
+        }
+    }
+}
