@@ -1,0 +1,41 @@
+// Girilen 3 sayıyı "küçükten büyüğe" sıralayan program
+// Klavyeden girilen sayıları sıralamak için bu şekilde kod yazabiliriz ancak daha fazla sayı karşılaştırıp sıralamak istiyorsak dizileri kullanmalıyız
+import java.util.Scanner;
+
+public class SortingProgram {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        // Kullanıcan karşılaştırma için değerleri alıyoruz
+        System.out.print("Enter the first number: ");
+        int number1 = input.nextInt();
+
+        System.out.print("Enter the second number: ");
+        int number2 = input.nextInt();
+
+        System.out.print("Enter the third number: ");
+        int number3 = input.nextInt();
+
+        // Kaarşılaştıma yapabilmek için boş bir değişken tanımlamalıyız
+        int temp;
+        
+        if (number1 > number2) {
+            temp = number1;
+            number1 = number2;
+            number2 = temp;
+        }
+
+        if (number2 > number3) {
+            temp = number2;
+            number2 = number3;
+            number3 = temp;
+        }
+
+        if (number1 > number2) {
+            temp = number1;
+            number1 = number2;
+            number2 = temp;
+        }
+
+        System.out.println("Sorting: " + number1 + " " + number2 + " " + number3);
+    }
+}
