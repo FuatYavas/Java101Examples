@@ -1,0 +1,40 @@
+//Kullanıcının not durumuna göre sınıf geçme durumunu hesaplayan program. Eğer girilen ders notları 0 veya 100 arasında değil ise ortalamaya katılmasın.
+//Her notun tek tek 0-100 arasında olup olmadığını kontrol etmek için dersleri bir dizi içine tanımladık
+import java.util.Scanner;
+
+public class ClassStatus {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Derslerin ve geçme notunun tanımlanması
+        String[] courses = {"Matematik", "Fizik", "Türkçe", "Kimya", "Müzik"};
+        int passingGrade = 55;
+
+        // Kullanıcıdan ders notlarının alınması
+        int totalGrade = 0;
+        int courseCount = courses.length;
+
+        for (int i = 0; i < courseCount; i++) {
+            System.out.print(courses[i] + " dersi için not girin: ");
+            int grade = input.nextInt();
+
+            if (grade < 0 || grade > 100) {
+                courseCount--;
+                continue;
+            }
+
+            totalGrade += grade;
+        }
+
+        // Sınıf durumunun hesaplanması
+        double average = (double) totalGrade / courseCount;
+
+        if (courseCount == 0) {
+            System.out.println("Geçersiz notlar girildi.");
+        } else if (average >= passingGrade) {
+            System.out.println("Tebrikler, sınıfı geçtiniz! Ortalama: " + average);
+        } else {
+            System.out.println("Maalesef, sınıfı geçemediniz. Ortalama: " + average);
+        }
+    }
+}
