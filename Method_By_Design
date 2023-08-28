@@ -1,0 +1,30 @@
+// is the recursive method that follows the given rule based on the user-input value n
+// kullanıcıdan alınan n değerine göre aşağıdaki kurala uyan döngü kullanmadan bir "Recursive" metot
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Bir n değeri girin: ");
+        int n = scanner.nextInt();
+
+        System.out.println("N Sayısı : " + n);
+        System.out.print("Çıktısı : ");
+        recursiveFunction(n, n);
+    }
+
+    public static void recursiveFunction(int originalN, int n) {
+        System.out.print(n + " ");
+
+        if (n <= 0) {
+            return;
+        }
+
+        recursiveFunction(originalN, n - 5);
+
+        if (n != originalN) {
+            System.out.print(n + " ");
+        }
+    }
+}
